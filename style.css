@@ -1,3 +1,92 @@
 body{
     background: #f0f0f0;
+    margin: 0;
+}
+header{
+    background: #ffffff;
+    padding: 4px;
+    font-size: 20px;
+    box-shadow: 0px 0px 3px 0 rgba(0,0,0,.5);
+}
+header a{
+    border-radius: 6px;
+    float: right;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: gray;
+    padding: 1px 5px;
+    display: inline-block;
+    margin: 2px;
+}
+.flexbox{
+    padding: 10px;
+    display: flex;
+}
+#colorbox{
+    border: 1px solid #808080;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+}
+#code{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #808080;
+    width: auto;
+    height: 100px;
+    margin: 5px;
+    flex-grow: 1;
+    padding: 5px;
+    overflow-y: scroll;
+}
+#toolbar{
+    text-align: right;
+    margin: 0 15px;
+}
+#toolbar a{
+    color: dodgerblue;
+    margin: 0px 10px;
+}
+.boxtitle{
+    background: #e0e0e0;
+    padding: 6px;
+    margin: 10px 10px 0px 10px;
+    border: 1px solid #808080;
+    border-radius: 6px 6px 0 0;
+}
+.boxcontent{
+    background: #ffffff;
+    margin: 0px 10px;
+    padding: 6px;
+    border: 1px solid #808080;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+.colorstop{
+    border: 1px solid #808080;
+    box-shadow: 0px 1px 2px 0 rgba(0,0,0,.2);
+    padding: 10px;
+    margin: 8px;
+    display: flex;
+    border-radius: 4px;
+}
+.colorstop input{
+    font-size: 16px;
+    border: 1px solid #505050;
+    padding: 4px;
+    border-radius: 4px;
+}
+.colorstop span{
+    margin: 4px 8px 4px 0px;
+}
+.point{
+    width: 100px;
+    margin-right: 15px;
+}
+.colorname{
+    flex-grow: 1;
 }
