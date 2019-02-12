@@ -1,7 +1,7 @@
 $( document ).ready( Load );
 
 var grad = new Object();
-const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' class='point'><span>カラー</span><input type='text' class='colorname jscolor' onchange='update()'></div>";
+const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor' onchange='update()'></div>";
 
 function Load() {
     $(".point")[0].value = "0";
@@ -26,8 +26,10 @@ function update(){
     }
     code = code.substr( 0, code.length-1 ) + ")";
     $("#colorbox").css("background", code);
-    $("#code").text("background : " + code);
+    $("#code").text("background : " + code + ";");
 }
 function addStop(){
     $("#stops").append( stopbase );
+    new jscolor( $(".colorname")[ $(".colorname").length-1 ] );
+    update();
 }
