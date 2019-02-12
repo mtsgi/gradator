@@ -7,6 +7,7 @@
     <script src="jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <script src="gradator.js"></script>
+    <script src="jscolor.js"></script>
 </head>
 
 <body>
@@ -22,19 +23,22 @@
         <a href="">クリップボードにコピー</a>
         <a href="">共有する</a>
     </div>
-    <div class="boxtitle">グラデーション</div>
-    <div class="boxcontent">
+    <div class="boxtitle">
+        グラデーション
+        <a id="addstop" onclick="addStop()">追加</a>
+    </div>
+    <div class="boxcontent" id="stops">
             <div class="colorstop">
-                <span>位置</span>
-                <input type="number" class="point">
+                <span>位置(%)</span>
+                <input type="number" class="point" onchange="update()">
                 <span>カラー</span>
-                <input type="text" class="colorname">
+                <input type="text" class="colorname jscolor" onchange="update()">
             </div>
             <div class="colorstop">
-                <span>位置</span>
-                <input type="number" class="point">
+                <span>位置(%)</span>
+                <input type="number" class="point" onchange="update()">
                 <span>カラー</span>
-                <input type="text" class="colorname">
+                <input type="text" class="colorname jscolor" onchange="update()">
             </div>
     </div>
 </body>
