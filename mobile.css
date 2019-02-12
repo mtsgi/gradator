@@ -1,0 +1,100 @@
+body{
+    background: #f0f0f0;
+    margin: 0;
+}
+header{
+    background: #ffffff;
+    padding: 4px;
+    font-size: 20px;
+    box-shadow: 0px 0px 3px 0 rgba(0,0,0,.5);
+}
+header a{
+    border-radius: 6px;
+    float: right;
+    font-size: 14px;
+    text-decoration: none;
+    border: 1px solid gray;
+    color: gray;
+    padding: 1px 5px;
+    display: inline-block;
+    margin: 2px;
+}
+.flexbox{
+    padding: 10px;
+    display: flex;
+}
+#colorbox{
+    border: 1px solid #808080;
+    min-width: 100px;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 6px;
+}
+#code{
+    font-family: 'Courier New', Courier, monospace;
+    border-radius: 6px;
+    background: #ffffff;
+    border: 1px solid #808080;
+    width: auto;
+    height: 100px;
+    margin: 5px;
+    padding: 5px;
+    overflow-y: scroll;
+}
+#toolbar{
+    font-size: 15px;
+    text-align: right;
+    margin: 0 15px;
+}
+#toolbar a{
+    color: dodgerblue;
+    margin: 0px 10px;
+}
+.boxtitle{
+    background: #e0e0e0;
+    padding: 6px;
+    margin: 10px 10px 0px 10px;
+    border: 1px solid #808080;
+    border-radius: 6px 6px 0 0;
+}
+.boxcontent{
+    background: #ffffff;
+    margin: 0px 10px;
+    padding: 6px;
+    border: 1px solid #808080;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
+}
+.colorstop{
+    background: #e0e0e0;
+    padding: 5px;
+    margin: 10px 4px;
+    border-radius: 4px;
+}
+.colorstop input{
+    font-size: 18px;
+    border: 1px solid #505050;
+    padding: 2px;
+    border-radius: 4px;
+}
+.colorstop span{
+    display: block;
+    margin: 1px;
+    font-size: 14px;
+}
+.point{
+    box-sizing: border-box;
+    width: 100%;
+    margin-right: 15px;
+}
+.colorname{
+    box-sizing: border-box;
+    width: 100%;
+}
+#addstop{
+    cursor: pointer;
+    float: right;
+    color: dodgerblue;
+    text-decoration: underline;
+}
