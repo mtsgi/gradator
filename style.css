@@ -15,9 +15,13 @@ header a{
     text-decoration: none;
     border: 1px solid gray;
     color: gray;
-    padding: 1px 5px;
+    padding: 4px 10px;
     display: inline-block;
-    margin: 2px;
+    margin: 10px;
+}
+header img{
+    margin: 6px 6px 0 0;
+    max-height: 40px;
 }
 .flexbox{
     padding: 10px;
@@ -25,7 +29,7 @@ header a{
 }
 #colorbox{
     border: 1px solid #808080;
-    width: 100px;
+    min-width: 100px;
     height: 100px;
     margin: 5px;
     padding: 5px;

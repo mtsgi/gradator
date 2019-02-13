@@ -12,14 +12,20 @@ header a{
     border-radius: 6px;
     float: right;
     font-size: 14px;
-    text-decoration: none;
-    border: 1px solid gray;
+    text-decoration: underline;
     color: gray;
-    padding: 1px 5px;
+    padding: 4px 5px;
     display: inline-block;
-    margin: 2px;
+    margin: 10px 4px;
+}
+header img{
+    margin: 6px 6px 0 0;
+    max-height: 40px;
+    max-width: 45%;
 }
 .flexbox{
+    box-sizing: border-box;
+    width: 100%;
     padding: 10px;
     display: flex;
 }
