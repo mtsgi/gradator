@@ -32,16 +32,24 @@
     <div class="boxcontent" id="stops">
             <div class="colorstop">
                 <span>位置(%)</span>
-                <input type="number" class="point" onchange="update()">
+                <input type="number" class="point">
                 <span>カラー</span>
-                <input type="text" class="colorname jscolor" onchange="update()">
+                <input type="text" class="colorname jscolor">
             </div>
             <div class="colorstop">
                 <span>位置(%)</span>
-                <input type="number" class="point" onchange="update()">
+                <input type="number" class="point">
                 <span>カラー</span>
-                <input type="text" class="colorname jscolor" onchange="update()">
+                <input type="text" class="colorname jscolor">
             </div>
+    </div>
+
+    <div class="boxtitle">
+        プリセット
+        <a id="addstop" onclick="addPreset()">プリセットに追加</a>
+    </div>
+    <div class="boxcontent" id="presets">
+        ここにプリセット
     </div>
     <div id="done">コピーしました</div>
 </body>

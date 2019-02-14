@@ -1,7 +1,7 @@
 $( document ).ready( Load );
 
 var grad = new Object();
-const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor' onchange='update()'></div>";
+const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor'></div>";
 
 function Load() {
     $(".point")[0].value = "0";
@@ -9,6 +9,7 @@ function Load() {
     $(".colorname")[0].jscolor.fromString("16D5F7")
     $(".colorname")[1].jscolor.fromString("125CE6");
     update();
+    $(document).on("change", "input", update);
 }
 
 function update(){
@@ -40,5 +41,6 @@ function copy2cb(){
     _selection.removeAllRanges();
     _selection.addRange(_range);
     document.execCommand("copy");
+    _selection.removeAllRanges();
     $("#done").show().fadeOut(800);
 }

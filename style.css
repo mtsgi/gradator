@@ -54,6 +54,8 @@ header img{
 #toolbar a{
     color: dodgerblue;
     margin: 0px 10px;
+    cursor: pointer;
+    text-decoration: underline;
 }
 .boxtitle{
     background: #e0e0e0;
