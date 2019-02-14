@@ -33,3 +33,12 @@ function addStop(){
     new jscolor( $(".colorname")[ $(".colorname").length-1 ] );
     update();
 }
+function copy2cb(){
+    let _range = document.createRange();
+    _range.selectNode( $("#code")[0] );
+    let _selection = getSelection();
+    _selection.removeAllRanges();
+    _selection.addRange(_range);
+    document.execCommand("copy");
+    $("#done").show().fadeOut(800);
+}
