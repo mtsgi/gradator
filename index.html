@@ -28,7 +28,7 @@
     <div class="boxtitle">
         グラデーション
         <a id="addstop" onclick="addStop()">点を追加</a>
-        <a onclick="readPreset( grad )">整形</a>
+        <a onclick="readPreset( grad )">自動整形</a>
     </div>
     <div class="boxcontent" id="stops">
             <div class="colorstop">
@@ -50,10 +50,15 @@
         <a onclick="addPreset()">セットする</a>
     </div>
     <div class="boxcontent" id="presets">
-        ・ユーザープリセット
+        ・ユーザープリセット<br>
         <div class="preset" id="p0" onclick="readPreset( preset[0] )"></div>
-        ・その他のプリセット
-        <div class="preset" id="p1" onclick="readPreset( preset[1] )"></div>
+        <br>
+        ・その他のプリセット<br>
+        <div class="preset" onclick="readPreset( preset[1] )"></div>
+        <div class="preset" onclick="readPreset( preset[2] )"></div>
+        <div class="preset" onclick="readPreset( preset[3] )"></div>
+        <div class="preset" onclick="readPreset( preset[4] )"></div>
+        <div class="preset" onclick="readPreset( preset[5] )"></div>
     </div>
     <div id="done">コピーしました</div>
 </body>

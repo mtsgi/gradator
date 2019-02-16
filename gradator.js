@@ -4,10 +4,11 @@ var grad = new Object();
 var preset = new Array();
 const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' min='0' max='100' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor'></div>";
 
-preset[1] = {
-    0: "16D5F7",
-    100: "125CE6"
-}
+preset[1] = {"0":"16D5F7","100":"125CE6"}
+preset[2] = {"0":"8A8A8A","48":"454545","52":"000000","100":"474747"}
+preset[3] = {"0":"FF0000","20":"FFFF00","40":"00FF00","60":"00FFFF","80":"0000FF","100":"FF00FF"}
+preset[4] = {"48":"21EB07","52":"11D100"};
+preset[5] = {"0":"E0E0E0","100":"FFFFFF"};
 
 function Load() {
     $(".point")[0].value = "0";
@@ -37,7 +38,6 @@ function update(){
 }
 
 function readPreset( _preset ){
-    console.log(_preset);
     grad = _preset;
     $("#stops").html("");
     for( i in grad ){

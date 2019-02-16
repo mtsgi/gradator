@@ -121,6 +121,7 @@ header img{
     text-decoration: underline;
 }
 .preset{
+    display: inline-block;
     width: 60px;
     height: 60px;
     border: 3px solid #ffffff;
