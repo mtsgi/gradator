@@ -100,6 +100,7 @@ header img{
     float: right;
     color: dodgerblue;
     text-decoration: underline;
+    margin: 0 4px;
 }
 #done{
     display: none;
@@ -122,7 +123,8 @@ header img{
 .preset{
     width: 60px;
     height: 60px;
-    border: 1px solid #808080;
-    border-radius: 5px;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 1px 2px 0 #808080;
+    border-radius: 8px;
     margin: 4px;
 }

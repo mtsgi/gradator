@@ -4,6 +4,11 @@ var grad = new Object();
 var preset = new Array();
 const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' min='0' max='100' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor'></div>";
 
+preset[1] = {
+    0: "16D5F7",
+    100: "125CE6"
+}
+
 function Load() {
     $(".point")[0].value = "0";
     $(".point")[1].value = "100";
@@ -11,9 +16,11 @@ function Load() {
     $(".colorname")[1].jscolor.fromString("125CE6");
     update();
     $(document).on("change", "input", update);
-    if( localStorage["gradator-preset"] ){
+    let cnt = 0;
+    for( i of $(".preset") ){
         preset[0] = JSON.parse( localStorage["gradator-preset"] );
-        $("#p0").css("background", gradParse(preset[0]));
+        $(i).css("background", gradParse(preset[cnt]));
+        cnt ++;
     }
 }
 
