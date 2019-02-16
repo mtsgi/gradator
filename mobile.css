@@ -100,7 +100,7 @@ header img{
     box-sizing: border-box;
     width: 100%;
 }
-#addstop{
+.boxtitle a{
     cursor: pointer;
     float: right;
     color: dodgerblue;

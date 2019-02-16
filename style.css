@@ -95,7 +95,7 @@ header img{
 .colorname{
     flex-grow: 1;
 }
-#addstop{
+.boxtitle a{
     cursor: pointer;
     float: right;
     color: dodgerblue;
@@ -113,4 +113,16 @@ header img{
     text-align: center;
     border-radius: 5px;
     text-shadow: 0px 1px 4px black;
+}
+#presets a{
+    cursor: pointer;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+.preset{
+    width: 60px;
+    height: 60px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    margin: 4px;
 }

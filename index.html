@@ -46,10 +46,10 @@
 
     <div class="boxtitle">
         プリセット
-        <a id="addstop" onclick="addPreset()">プリセットに追加</a>
     </div>
     <div class="boxcontent" id="presets">
-        ここにプリセット
+        <a onclick="addPreset()">プリセットに追加</a>
+        <div class="preset" id="p0" onclick="readPreset( preset[0] )"></div>
     </div>
     <div id="done">コピーしました</div>
 </body>

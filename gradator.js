@@ -1,6 +1,7 @@
 $( document ).ready( Load );
 
 var grad = new Object();
+var preset = new Array();
 const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' min='0' max='100' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor'></div>";
 
 function Load() {
@@ -10,6 +11,15 @@ function Load() {
     $(".colorname")[1].jscolor.fromString("125CE6");
     update();
     $(document).on("change", "input", update);
+    if( localStorage["gradator-preset"] ){
+        preset[0] = JSON.parse( localStorage["gradator-preset"] );
+        var code = "linear-gradient(";
+        for( i in preset[0] ){
+            code += "#" + preset[0][i] + " " + i + "%,";
+        }
+        code = code.substr( 0, code.length-1 ) + ")";
+        $("#p0").css("background", code);
+    }
 }
 
 function update(){
@@ -20,7 +30,6 @@ function update(){
         let color = $(".colorname")[i].value;
         grad[String(point)] = color;
     }
-    console.log(grad);
     var code = "linear-gradient(";
     for( i in grad ){
         code += "#" + grad[i] + " " + i + "%,";
@@ -28,13 +37,26 @@ function update(){
     code = code.substr( 0, code.length-1 ) + ")";
     $("#colorbox").css("background", code);
     $("#code").text("background : " + code + ";");
-    $("#presets").text( JSON.stringify(grad) );
 }
+
+function readPreset( _preset ){
+    console.log(_preset);
+    grad = _preset;
+    var code = "linear-gradient(";
+    for( i in grad ){
+        code += "#" + grad[i] + " " + i + "%,";
+    }
+    code = code.substr( 0, code.length-1 ) + ")";
+    $("#colorbox").css("background", code);
+    $("#code").text("background : " + code + ";");
+}
+
 function addStop(){
     $("#stops").append( stopbase );
     new jscolor( $(".colorname")[ $(".colorname").length-1 ] );
     update();
 }
+
 function copy2cb(){
     let _range = document.createRange();
     _range.selectNode( $("#code")[0] );
@@ -44,4 +66,15 @@ function copy2cb(){
     document.execCommand("copy");
     _selection.removeAllRanges();
     $("#done").show().fadeOut(800);
+}
+
+function addPreset(){
+    localStorage.setItem("gradator-preset", JSON.stringify(grad));
+    preset[0] = JSON.parse( localStorage["gradator-preset"] );
+    var code = "linear-gradient(";
+    for( i in preset[0] ){
+        code += "#" + preset[0][i] + " " + i + "%,";
+    }
+    code = code.substr( 0, code.length-1 ) + ")";
+    $("#p0").css("background", code);
 }
