@@ -132,3 +132,16 @@ header img{
     border-radius: 8px;
     margin: 4px;
 }
+#about{
+    display: none;
+    position: fixed;
+    top: 70px;
+    left: 0;
+    margin: 15px;
+    padding: 10px;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px 0 #808080;
+}
