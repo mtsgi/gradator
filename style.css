@@ -115,11 +115,6 @@ header img{
     border-radius: 5px;
     text-shadow: 0px 1px 4px black;
 }
-#presets a{
-    cursor: pointer;
-    color: dodgerblue;
-    text-decoration: underline;
-}
 .preset{
     display: inline-block;
     width: 60px;
