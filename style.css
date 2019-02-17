@@ -9,6 +9,7 @@ header{
     box-shadow: 0px 0px 3px 0 rgba(0,0,0,.5);
 }
 header a{
+    cursor: pointer;
     border-radius: 6px;
     float: right;
     font-size: 14px;
@@ -123,4 +124,17 @@ header img{
     box-shadow: 0px 1px 2px 0 #808080;
     border-radius: 8px;
     margin: 4px;
+}
+#about{
+    display: none;
+    position: fixed;
+    top: 62px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 62px);
+    box-sizing: border-box;
+    padding: 10px;
+    background: rgba(0,0,0,.6);
+    color: #ffffff;
+    text-shadow: 0 1px 3px #000000, 0 1px 3px #000000;
 }

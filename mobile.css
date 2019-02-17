@@ -10,6 +10,7 @@ header{
 }
 
 header a{
+    cursor: pointer;
     border-radius: 6px;
     float: right;
     font-size: 12px;

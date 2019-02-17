@@ -15,11 +15,11 @@
 <body>
     <header>
         <img src="logo.png" alt="Gradator">
-        <a href="about.html">Gradatorについて</a>
+        <a onclick="$('#about').toggle()">Gradatorについて</a>
     </header>
     <div class="flexbox">
         <div id="colorbox"></div>
-        <div id="code">background : white;</div>
+        <div id="code"></div>
     </div>
     <div id="toolbar">
         <a onclick="copy2cb()">クリップボードにコピー</a>
@@ -64,7 +64,9 @@
     <div id="done">コピーしました</div>
 
     <div id="about">
-        
+        GradatorはCSS3のグラデーションを簡単に作成するためのアプリケーションです。<br>
+        「自動整形」を押すと位置が上から順になるよう並べ替え、重複する点を一つにまとめます。<br>
+        「セットする」を押すと現在のプリセットは上書きされます。
     </div>
 </body>
 

@@ -19,7 +19,7 @@ function Load() {
     $(document).on("change", "input", update);
     let cnt = 0;
     for( i of $(".preset") ){
-        preset[0] = JSON.parse( localStorage["gradator-preset"] );
+        if( localStorage["gradator-preset"] ) preset[0] = JSON.parse( localStorage["gradator-preset"] );
         $(i).css("background", gradParse(preset[cnt]));
         cnt ++;
     }
