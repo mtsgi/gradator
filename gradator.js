@@ -19,14 +19,14 @@ function Load() {
     update();
     $(document).on("change", "input", update);
     let cnt = 0;
-    if( localStorage["gradator-preset"] ){
-        let userpreset = JSON.parse( localStorage["gradator-preset"] );
-        for( i in userpreset ){
-            user[i] = gradParse( userpreset[i] );
-        }
-    }
+    if( localStorage["gradator-preset"] ) user = JSON.parse( localStorage["gradator-preset"] );
     for( i of $(".preset") ){
         $(i).css("background", gradParse(preset[cnt]));
+        cnt ++;
+    }
+    cnt = 0;
+    for( i of $(".userpreset") ){
+        $(i).css("background", gradParse(user[cnt]));
         cnt ++;
     }
 }
@@ -44,6 +44,10 @@ function update(){
 }
 
 function readPreset( _preset ){
+    if( !_preset ){
+        alert("セットされていません。");
+        return;
+    }
     grad = _preset;
     $("#stops").html("");
     for( i in grad ){
@@ -73,14 +77,14 @@ function copy2cb(){
 }
 
 function addPreset(index){
-    localStorage.setItem("gradator-preset", JSON.stringify(grad));
-    preset[index] = JSON.parse( localStorage["gradator-preset"] );
+    user[index] = grad;
     var code = "linear-gradient(";
     for( i in preset[index] ){
         code += "#" + preset[index][i] + " " + i + "%,";
     }
     code = code.substr( 0, code.length-1 ) + ")";
-    $("#u"+index).css("background", code);
+    $("#u"+index).css("background", gradParse(grad));
+    localStorage.setItem("gradator-preset", JSON.stringify(user) );
 }
 
 function gradParse( _obj ){
