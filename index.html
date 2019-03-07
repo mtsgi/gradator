@@ -46,18 +46,23 @@
 
     <div class="boxtitle">
         プリセット
-        <a onclick="addPreset()">セットする</a>
     </div>
     <div class="boxcontent" id="presets">
-        ・ユーザープリセット<br>
-        <div class="preset" id="p0" onclick="readPreset( preset[0] )"></div>
-        <br>
         ・その他のプリセット<br>
+        <div class="preset" onclick="readPreset( preset[0] )"></div>
         <div class="preset" onclick="readPreset( preset[1] )"></div>
         <div class="preset" onclick="readPreset( preset[2] )"></div>
         <div class="preset" onclick="readPreset( preset[3] )"></div>
         <div class="preset" onclick="readPreset( preset[4] )"></div>
-        <div class="preset" onclick="readPreset( preset[5] )"></div>
+        <br>
+        ・ユーザープリセット<br>
+        <div class="userpreset" id="u0" onclick="readPreset( user[0] )"></div>
+        <a class="set" onclick="addPreset(0)">セット</a>
+        <div class="userpreset" id="u1" onclick="readPreset( user[1] )"></div>
+        <a class="set" onclick="addPreset(1)">セット</a>
+        <div class="userpreset" id="u2" onclick="readPreset( user[2] )"></div>
+        <a class="set" onclick="addPreset(2)">セット</a>
+
     </div>
     
     <div id="done">コピーしました</div>
@@ -65,7 +70,8 @@
     <div id="about">
         GradatorはCSS3のグラデーションを簡単に作成するためのアプリケーションです。<br>
         「自動整形」を押すと位置が上から順になるよう並べ替え、重複する点を一つにまとめます。<br>
-        「セットする」を押すと現在のプリセットは上書きされます。
+        「セットする」を押すと現在のプリセットは上書きされます。<br>
+        This application is using jscolor, based on GPLv3 license.
     </div>
 </body>
 
