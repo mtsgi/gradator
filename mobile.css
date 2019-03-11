@@ -123,7 +123,7 @@ header img{
     border-radius: 5px;
     text-shadow: 0px 1px 4px black;
 }
-.preset{
+.preset, .userpreset{
     display: inline-block;
     width: 60px;
     height: 60px;
@@ -131,6 +131,20 @@ header img{
     box-shadow: 0px 1px 2px 0 #808080;
     border-radius: 8px;
     margin: 4px;
+}
+.set{
+    cursor: pointer;
+    background : linear-gradient(#FFFFFF 0%,#E0E0E0 100%);
+    text-align: center;
+    display: inline-block;
+    width: 60px;
+    border: 3px solid #ffffff;
+    box-shadow: 0px 1px 2px 0 #808080;
+    border-radius: 8px;
+    margin: 4px;
+}
+.set:hover{
+    background: #ffffff;
 }
 #about{
     display: none;
