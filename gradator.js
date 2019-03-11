@@ -45,7 +45,7 @@ function update(){
 
 function readPreset( _preset ){
     if( !_preset ){
-        alert("セットされていません。");
+        $("#done").text("セットされていません").show().fadeOut(800);
         return;
     }
     grad = _preset;
@@ -73,18 +73,14 @@ function copy2cb(){
     _selection.addRange(_range);
     document.execCommand("copy");
     _selection.removeAllRanges();
-    $("#done").show().fadeOut(800);
+    $("#done").text("コピーしました").show().fadeOut(800);
 }
 
 function addPreset(index){
     user[index] = grad;
-    var code = "linear-gradient(";
-    for( i in preset[index] ){
-        code += "#" + preset[index][i] + " " + i + "%,";
-    }
-    code = code.substr( 0, code.length-1 ) + ")";
     $("#u"+index).css("background", gradParse(grad));
     localStorage.setItem("gradator-preset", JSON.stringify(user) );
+    $("#done").text(index+"にセットしました").show().fadeOut(800);
 }
 
 function gradParse( _obj ){
@@ -94,4 +90,8 @@ function gradParse( _obj ){
     }
     code = code.substr( 0, code.length-1 ) + ")";
     return code;
+}
+
+function exportPresets(){
+    $("#done").text("エクスポートできません").show().fadeOut(800);
 }

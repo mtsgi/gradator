@@ -152,3 +152,8 @@ header img{
     color: #ffffff;
     text-shadow: 0 1px 3px #000000, 0 1px 3px #000000;
 }
+#about a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: skyblue;
+}

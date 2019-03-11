@@ -59,22 +59,29 @@
         <div class="userpreset" id="u0" onclick="readPreset( user[0] )"></div>
         <div class="userpreset" id="u1" onclick="readPreset( user[1] )"></div>
         <div class="userpreset" id="u2" onclick="readPreset( user[2] )"></div>
+        <div class="userpreset" id="u3" onclick="readPreset( user[3] )"></div>
+        <div class="userpreset" id="u4" onclick="readPreset( user[4] )"></div>
         <div>
             <a class="set" onclick="addPreset(0)">セット</a>
             <a class="set" onclick="addPreset(1)">セット</a>
             <a class="set" onclick="addPreset(2)">セット</a>
+            <a class="set" onclick="addPreset(3)">セット</a>
+            <a class="set" onclick="addPreset(4)">セット</a>
         </div>
 
     </div>
-    
-    <div id="done">コピーしました</div>
 
     <div id="about">
         GradatorはCSS3のグラデーションを簡単に作成するためのアプリケーションです。<br>
         「自動整形」を押すと位置が上から順になるよう並べ替え、重複する点を一つにまとめます。<br>
         「セットする」を押すと現在のプリセットは上書きされます。<br>
-        This application is using jscolor, based on GPLv3 license.
+        This application is using jscolor, based on GPLv3 license.<br><br>
+        - オプション<br>
+        <a onclick="localStorage.removeItem('gradator-preset')" href="">ユーザープリセットをすべて削除</a><br>
+        <a onclick="exportPresets()">ユーザープリセットをエクスポート</a>
     </div>
+    
+    <div id="done"></div>
 </body>
 
 </html>
