@@ -22,6 +22,8 @@
         <div id="code"></div>
     </div>
     <div id="toolbar">
+            <a id="t2r" onclick="turn2Range()">範囲式に切り替え</a>
+            <a id="t2n" onclick="turn2Number()">数字式に切り替え</a>
         <a onclick="copy2cb()">クリップボードにコピー</a>
     </div>
     <div class="boxtitle">
@@ -32,13 +34,13 @@
     <div class="boxcontent" id="stops">
             <div class="colorstop">
                 <span>位置(%)</span>
-                <input min='0' max='100' type="number" class="point">
+                <input step='1' min='0' max='100' type="number" class="point">
                 <span>カラー</span>
                 <input type="text" class="colorname jscolor">
             </div>
             <div class="colorstop">
                 <span>位置(%)</span>
-                <input min='0' max='100' type="number" class="point">
+                <input step='1' min='0' max='100' type="number" class="point">
                 <span>カラー</span>
                 <input type="text" class="colorname jscolor">
             </div>

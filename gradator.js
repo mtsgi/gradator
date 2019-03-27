@@ -3,7 +3,7 @@ $( document ).ready( Load );
 var grad = new Object();
 var user = new Array();
 var preset = new Array();
-const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input type='number' min='0' max='100' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor'></div>";
+const stopbase = "<div class='colorstop' id='stopbase'><span>位置(%)</span><input step='1' type='number' min='0' max='100' class='point' value='0'><span>カラー</span><input type='text' class='colorname jscolor'></div>";
 
 preset[0] = {"0":"16D5F7","100":"125CE6"}
 preset[1] = {"0":"8A8A8A","48":"454545","52":"000000","100":"474747"}
@@ -56,6 +56,8 @@ function readPreset( _preset ){
     }
     $("#colorbox").css("background", gradParse(grad));
     $("#code").text("background : " + gradParse(grad) + ";");
+    $("#t2n").hide();
+    $("#t2r").show();
     update();
 }
 
@@ -94,4 +96,20 @@ function gradParse( _obj ){
 
 function exportPresets(){
     $("#done").text("エクスポートできません").show().fadeOut(800);
+}
+
+function turn2Range(){
+    for( let i=0; i<$(".point").length; i++ ){
+        $(".point")[i].type = "range";
+    }
+    $("#t2r").hide();
+    $("#t2n").show();
+}
+
+function turn2Number(){
+    for( let i=0; i<$(".point").length; i++ ){
+        $(".point")[i].type = "number";
+    }
+    $("#t2n").hide();
+    $("#t2r").show();
 }
