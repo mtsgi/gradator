@@ -95,7 +95,12 @@ function gradParse( _obj ){
 }
 
 function exportPresets(){
-    $("#done").text("エクスポートできません").show().fadeOut(800);
+    let data = JSON.stringify(user);
+    var blob = new Blob([data], {type: "text/plain"});
+    var a = document.getElementById("export");
+    a.href = URL.createObjectURL(blob);
+    a.target = "_blank";
+    a.download = "gradator-preset.json";
 }
 
 function turn2Range(){
