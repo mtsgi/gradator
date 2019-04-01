@@ -21,6 +21,9 @@ header a{
     display: inline-block;
     margin: 10px;
 }
+header a:hover{
+    background: #e0e0e0;
+}
 header img{
     margin: 6px 6px 0 0;
     max-height: 40px;
@@ -30,24 +33,24 @@ header img{
     box-sizing: border-box;
     width: 100%;
     padding: 10px;
-    display: flex;
 }
 #colorbox{
     border: 1px solid #808080;
-    min-width: 100px;
+    width: 100px;
     height: 100px;
-    margin: 5px;
+    margin: 0 5px;
     padding: 5px;
-    border-radius: 6px;
+    border-radius: 6px 6px 0 0;
+    border-bottom: none;
 }
 #code{
     font-family: 'Courier New', Courier, monospace;
-    border-radius: 6px;
+    border-radius: 0 6px 6px 6px;
     background: #ffffff;
     border: 1px solid #808080;
     width: auto;
     height: 100px;
-    margin: 5px;
+    margin: 0 5px;
     padding: 5px;
     overflow-y: scroll;
 }
@@ -57,8 +60,9 @@ header img{
     margin: 0 15px;
 }
 #toolbar a{
+    display: block;
     color: dodgerblue;
-    margin: 0px 10px;
+    margin: 5px 10px;
     cursor: pointer;
     text-decoration: underline;
 }
@@ -132,6 +136,10 @@ header img{
     border-radius: 8px;
     margin: 4px;
 }
+.preset:hover, .userpreset:hover{
+    border-color: #a0a0a0;
+    box-shadow: none;
+}
 .set{
     cursor: pointer;
     background : linear-gradient(#FFFFFF 0%,#E0E0E0 100%);
@@ -144,7 +152,9 @@ header img{
     margin: 4px;
 }
 .set:hover{
+    border-color: #a0a0a0;
     background: #ffffff;
+    box-shadow: none;
 }
 #about{
     display: none;
@@ -158,4 +168,9 @@ header img{
     border: 1px solid #808080;
     border-radius: 5px;
     box-shadow: 0 1px 4px 0 #808080;
+}
+#about a{
+    cursor: pointer;
+    text-decoration: underline;
+    color: dodgerblue;
 }

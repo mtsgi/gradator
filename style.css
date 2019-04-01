@@ -20,6 +20,9 @@ header a{
     display: inline-block;
     margin: 10px;
 }
+header a:hover{
+    background: #e0e0e0;
+}
 header img{
     margin: 6px 6px 0 0;
     max-height: 40px;
@@ -125,6 +128,10 @@ header img{
     border-radius: 8px;
     margin: 4px;
 }
+.preset:hover, .userpreset:hover{
+    border-color: #a0a0a0;
+    box-shadow: none;
+}
 .set{
     cursor: pointer;
     background : linear-gradient(#FFFFFF 0%,#E0E0E0 100%);
@@ -137,7 +144,9 @@ header img{
     margin: 4px;
 }
 .set:hover{
+    border-color: #a0a0a0;
     background: #ffffff;
+    box-shadow: none;
 }
 #about{
     display: none;

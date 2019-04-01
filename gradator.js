@@ -96,7 +96,7 @@ function gradParse( _obj ){
 
 function exportPresets(){
     let data = JSON.stringify(user);
-    var blob = new Blob([data], {type: "text/plain"});
+    var blob = new Blob([data], {type: "application/json"});
     var a = document.getElementById("export");
     a.href = URL.createObjectURL(blob);
     a.target = "_blank";
